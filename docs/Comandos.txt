@@ -1,0 +1,4 @@
+# Docker
+docker-compose up --build // Reconstruye la imagen del docker.
+docker-compose down // Detiene todos los containers.
+docker-compose up // Inicia los container con las imágenes reconstruidas.

@@ -1,0 +1,8 @@
+PORTAL DE PROVEEDORES: 
+
+Funcionalidades:
+1. El proveedor deberá tener una barra de navegación en la mano izquierda (minimalista) en la cuál tenga las siguientes opciones:	
+	1.1. Configuración: Configurar correos donde le llegarán las alertas del sistema, configurar cuenta de banco donde se depositará el dinero, 	etc(considera otras opciones que creas necesarias).
+	1.2. Subida de Comprobantes: Vista en donde tendrá el formulario para seleccionar sus órdenes de compra y posiciones para de esta manera poder
+	subir sus facturas asociadas a las misma. El proveedor de nuestros clientes (llamémosle clientes a los usuarios que tendrán nuestra APP) podrán 	subir todas las facturas electrónicas al portal web, en donde subirán archivos tales como:PDF de la Factura,PDF de la Guía de Remisión (mercadería) 	o PDF de acta de conformidad (servicio), XML de factura electrónica: Este archivo es el más importante ya que deberemos leer sus campos(tags) y 	realizar las validaciones en el sistema.
+	1.3. Estatus del Comprobante: Vista minimalista en donde el proveedor podrá visualizar de manera amigable el flujo de su comprobante, puedes guiarte 	por ejemplo como amazon muestra el estado de llegado de sus productos a los clientes.

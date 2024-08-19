@@ -1,0 +1,32 @@
++-------------------------------------------------------------------+
+|                       Fases del Proyecto                          |
++-------------------------------------------------------------------+
+| 1. Planificación y Diseño                                          |
+|    - Requisitos Funcionales y No Funcionales                       |
+|    - Diseño de la Arquitectura                                     |
+|    - Mockups y Diseño de la UI                                     |
+|-------------------------------------------------------------------|
+| 2. Configuración Inicial del Proyecto                              |
+|    - Configuración del Backend con Node.js y Express               |
+|    - Configuración de la Base de Datos con PostgreSQL              |
+|    - Configuración de Contenedores Docker                          |
+|    - Configuración del Frontend con React                          |
+|-------------------------------------------------------------------|
+| 3. Desarrollo del Backend                                          |
+|    - Creación de la API REST                                       |
+|    - Implementación de Seguridad con JWT y Bcrypt                 |
+|    - Validación de Datos y Manejo de Errores                       |
+|    - Implementación de la Subida de Archivos y Validación de XML   |
+|-------------------------------------------------------------------|
+| 4. Desarrollo del Frontend                                         |
+|    - Desarrollo de la UI con React                                 |
+|    - Integración del Frontend con la API                           |
+|    - Manejo de Estado con Context API                              |
+|    - Pruebas y Validación del Frontend                             |
+|-------------------------------------------------------------------|
+| 5. Despliegue y Mantenimiento                                      |
+|    - Configuración de Despliegue con Docker                        |
+|    - Testing Unitario y de Integración                             |
+|    - Despliegue en Producción (Web y Play Store)                   |
+|    - Documentación Final                                           |
++-------------------------------------------------------------------+
