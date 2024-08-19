@@ -18,6 +18,5 @@ app.use(express.json());
 // end of middelware
 
 app.listen(port, () =>{
-    connect();
-    console.log(`Connected to backend at port ${port}`);
+  console.log(`Connected to backend at port ${port}`);
 });
