@@ -3,9 +3,9 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
-dotenv.config();
 
 /* MIDEELWARE */
 // Middelware to parse cookie's and json
