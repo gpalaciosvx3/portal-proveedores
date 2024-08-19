@@ -5,3 +5,9 @@ docker-compose up // Inicia los container con las imágenes reconstruidas.
 docker compose up --watch // observará cambios en los archivos de las rutas watch configuradas en el archivo yml
 docer logs // lista log docker 
 docker ps // lista imagenes 
+
+# PostgreSQL
+npx sequelize-cli model:generate --name Invoice --attributes name:string,amount:decimal,providerId:integer // Crea Modelos
+npx sequelize-cli db:migrate // Migra Modelos
+npx sequelize-cli db:migrate:undo:all // Revierte todas las migraciones
+
