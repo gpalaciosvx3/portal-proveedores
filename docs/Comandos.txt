@@ -2,3 +2,6 @@
 docker-compose up --build // Reconstruye la imagen del docker.
 docker-compose down // Detiene todos los containers.
 docker-compose up // Inicia los container con las imágenes reconstruidas.
+docker compose up --watch // observará cambios en los archivos de las rutas watch configuradas en el archivo yml
+docer logs // lista log docker 
+docker ps // lista imagenes 
