@@ -1,0 +1,31 @@
++-------------------------------------------+
+|           Navegador Web / Móvil           |
+|  (Frontend React / React Native)          |
++-------------------------------------------+
+                |
+                v
++-------------------------------------------+
+|            Servidor Backend (Node.js)     |
+|           API REST con Express            |
+| Autenticación (JWT), Validación XML, CRUD |
++-------------------------------------------+
+                |
+                v
++-------------------+     +-------------------+
+|     PostgreSQL    |<--->|   Almacenamiento  |
+|                   |     |   de Archivos     |
+|  Datos de usuarios|     |   (S3, local)     |
+|  y comprobantes   |     |                   |
++-------------------+     +-------------------+
+                |
+                v
++-------------------------------------------+
+|        Docker (Contenedores)              |
+|   Backend, Frontend, PostgreSQL, Nginx    |
++-------------------------------------------+
+                |
+                v
++-------------------------------------------+
+|               Infraestructura             |
+|      (Servidor local, Nube, etc.)         |
++-------------------------------------------+

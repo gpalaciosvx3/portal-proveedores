@@ -1,0 +1,16 @@
+Tipo de Provisión:
+Provisión de Bienes: Se refiere a la entrega de productos físicos o materiales, como materias primas, componentes, o bienes terminados.
+
+Provisión de Servicios: Implica ofrecer servicios en lugar de productos tangibles, como consultoría, mantenimiento, soporte técnico, entre otros.
+
+Provisión de Recursos Humanos: Incluye la asignación de personal o fuerza laboral para proyectos específicos o tareas.
+
+Provisión de Software: Se refiere a la entrega de software, ya sea como producto (licencias) o como servicio (SaaS).
+
+Provisión Financiera: Consiste en la asignación de fondos o recursos financieros, como créditos, seguros, o inversiones.
+
+Provisión de Infraestructura: Involucra el suministro de infraestructura física o tecnológica, como redes, servidores, o instalaciones.
+
+Provisión Educativa: Se refiere a la oferta de programas educativos, cursos, entrenamientos o capacitación.
+
+Provisión Logística: Incluye la gestión y entrega de bienes o servicios, abarcando transporte, almacenamiento y distribución.

@@ -1,0 +1,14 @@
+# Docker
+docker-compose up --build // Reconstruye la imagen del docker.
+docker-compose down // Detiene todos los containers.
+docker-compose up // Inicia los container con las imágenes reconstruidas.
+docker compose up --watch // observará cambios en los archivos de las rutas watch configuradas en el archivo yml
+docer logs // lista log docker 
+docker ps // lista imagenes 
+
+# sequelize
+npx sequelize-cli model:generate --name Invoice --attributes name:string,amount:decimal,providerId:integer // Crea Modelos y archivo de migración
+npx sequelize-cli migration:generate --name create-usuario // Crea SOLO archivo de migración (Para cuando se genera modelos manual)
+npx sequelize-cli db:migrate // Migra Modelos
+npx sequelize-cli db:migrate --to 20240820032415-create_usuario.cjs // Migra modelos de manera individual
+npx sequelize-cli db:migrate:undo:all // Revierte todas las migraciones

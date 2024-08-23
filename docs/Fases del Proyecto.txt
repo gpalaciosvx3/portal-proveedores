@@ -1,0 +1,50 @@
++-------------------------------------------------------------------+
+|                       Fases del Proyecto                          |
++-------------------------------------------------------------------+
+Fase 1: Revisión de Requisitos
+  1.1 Requisitos Funcionales y No Funcionales
+  1.2 Diseño de la Arquitectura
+  1.3 Mockups y Diseño de la UI
+
+Fase 2: Configuración Inicial del Proyecto
+  2.1 Crear un Repositorio en GitHub - Completado
+  2.2 Configurar el Proyecto en Tu Máquina Local - Completado
+  2.3 Configurar Docker - Completado
+  2.4 Verificación de la configuración Docker - Completado
+
+Fase 3: Desarrollo del Backend
+  3.1 Configuración del Servidor Express
+  3.2 Conexión a la Base de Datos PostgreSQL
+  3.3 Creación de los Modelos y Migraciones
+  3.4 Implementación de la Autenticación (JWT)
+  3.5 Implementación de las Rutas y Controladores
+  3.6 Creación de Microservicios
+  3.7 Pruebas y Verificación del Backend
+
+Fase 4: Desarrollo del Frontend
+  4.1 Configuración Inicial de React
+  4.2 Diseño y Desarrollo de Componentes UI
+  4.3 Integración con el Backend
+  4.4 Gestión de Estado (Context API, Redux, etc.)
+  4.5 Pruebas y Verificación del Frontend
+
+Fase 5: Implementación de Seguridad y Roles
+  5.1 Configuración de Roles y Permisos
+  5.2 Pruebas de Seguridad
+
+Fase 6: Pruebas Integrales y Despliegue
+  6.1 Pruebas de Integración
+  6.2 Preparación para Despliegue
+  6.3 Despliegue en Entornos de Prueba y Producción
+
+Fase 7: Implementación de la Aplicación Móvil
+  7.1 Adaptación del Proyecto a PWA (Progressive Web App)
+  7.2 Configuración para Despliegue en Play Store
+  7.3 Pruebas y Verificación en Dispositivos Móviles
+
+Fase 8: Mantenimiento y Actualización
+  8.1 Monitoreo de la Aplicación
+  8.2 Implementación de Nuevas Funcionalidades
+  8.3 Mantenimiento Regular
+
++-------------------------------------------------------------------+
