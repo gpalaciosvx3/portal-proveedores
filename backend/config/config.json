@@ -3,21 +3,21 @@
     "username": "sa",
     "password": "sa",
     "database": "portal_proveedores",
-    "host": "127.0.0.1",
+    "host": "postgres",
     "dialect": "postgres"
   },
   "test": {
     "username": "sa",
     "password": "sa",
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "postgres",
     "dialect": "postgres"
   },
   "production": {
     "username": "sa",
     "password": "sa",
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "postgres",
     "dialect": "postgres"
   }
 }

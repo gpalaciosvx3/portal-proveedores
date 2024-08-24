@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 import morgan from "morgan";
-import sequelize from "./config/database.js";
+// Importa rutas del Controllador
+import authRoutes from "./routes/auth.js";
+import usuarioRoutes from "./routes/usuario.js"
 
 dotenv.config();
 const app = express();
@@ -16,16 +18,21 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
 
-// My own routes middelware
-app.get('/test-db', async (req, res) => {
-  try {
-    await sequelize.authenticate();
-    res.status(200).send('Conectado a bd psql.');
-  } catch (error) { 
-    res.status(500).send(`Falló conexión con bd: ${error.message}`)
-  }
-});
+// Mis Middelware
+app.use("/api/auth", authRoutes);
+app.use("/api/usuario", usuarioRoutes)
 
+// Middelware to get Errors.
+app.use((err,req,res,next) =>{
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || 'Somethin went wrong!';
+  return res.status(errorStatus).json({
+      success: false,
+      status: errorStatus,
+      message: errorMessage,
+      stack: err.stack,
+  });
+}); 
 
 /* --------- */
 
