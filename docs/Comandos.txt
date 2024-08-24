@@ -5,6 +5,8 @@ docker-compose up // Inicia los container con las imágenes reconstruidas.
 docker compose up --watch // observará cambios en los archivos de las rutas watch configuradas en el archivo yml
 docer logs // lista log docker 
 docker ps // lista imagenes 
+docker-compose exec backend sh // acceder al contenedor
+docker login // loguearse
 
 # sequelize
 npx sequelize-cli model:generate --name Invoice --attributes name:string,amount:decimal,providerId:integer // Crea Modelos y archivo de migración
@@ -12,3 +14,6 @@ npx sequelize-cli migration:generate --name create-usuario // Crea SOLO archivo 
 npx sequelize-cli db:migrate // Migra Modelos
 npx sequelize-cli db:migrate --to 20240820032415-create_usuario.cjs // Migra modelos de manera individual
 npx sequelize-cli db:migrate:undo:all // Revierte todas las migraciones
+
+# Varios
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))" // genera token random para JWT
