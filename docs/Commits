@@ -1,8 +1,4 @@
-Nomenclatura de Commits
-Cada commit debería comenzar con un prefijo que indique el tipo de cambio seguido de una breve descripción. Aquí están los prefijos más comunes que utilizaremos:
-
 feat: Cuando se añade una nueva funcionalidad o característica al proyecto.
-
 Ejemplo: feat: Add user authentication module
 fix: Cuando se corrige un error en el código.
 

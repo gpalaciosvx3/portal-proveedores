@@ -1,0 +1,26 @@
+# Códigos de Estado 2xx: Éxito
+200 OK: La solicitud ha tenido éxito. Es el código estándar para respuestas exitosas.
+201 Created: Se utiliza cuando una nueva entidad ha sido creada, como al crear un nuevo recurso en una base de datos.
+204 No Content: La solicitud ha tenido éxito, pero no hay contenido que devolver. Se usa comúnmente en respuestas a operaciones de eliminación.
+
+# Códigos de Estado 3xx: Redirección
+301 Moved Permanently: La URL solicitada se ha movido permanentemente a una nueva ubicación.
+302 Found: La URL solicitada ha sido encontrada, pero en una ubicación temporalmente diferente.
+304 Not Modified: Indica que el recurso no ha sido modificado desde la última solicitud. Se usa en respuestas de caché.
+
+# Códigos de Estado 4xx: Errores del Cliente
+400 Bad Request: La solicitud es incorrecta o no se puede procesar debido a un error del cliente (p. ej., parámetros inválidos).
+401 Unauthorized: Se requiere autenticación para acceder al recurso solicitado. Es el código estándar para solicitudes no autenticadas.
+403 Forbidden: El cliente está autenticado pero no tiene permiso para acceder al recurso.
+404 Not Found: El recurso solicitado no se encuentra. Es el código estándar cuando una URL no corresponde a un recurso existente.
+405 Method Not Allowed: El método HTTP utilizado no está permitido para el recurso solicitado.
+409 Conflict: Se usa cuando hay un conflicto en la solicitud, como un intento de crear un recurso que ya existe.
+422 Unprocessable Entity: La solicitud está bien formada pero no puede ser procesada debido a errores semánticos (p. ej., validación fallida de datos).
+429 Too Many Requests: Se utiliza para indicar que el cliente ha realizado demasiadas solicitudes en un corto período de tiempo (rate limiting).
+
+# Códigos de Estado 5xx: Errores del Servidor
+500 Internal Server Error: Un error general del servidor. Se utiliza cuando algo ha salido mal, pero no se especifica la causa exacta.
+501 Not Implemented: El servidor no reconoce el método de la solicitud o carece de la capacidad para cumplirla.
+502 Bad Gateway: El servidor, actuando como una puerta de enlace o proxy, recibió una respuesta inválida del servidor upstream.
+503 Service Unavailable: El servidor no está disponible actualmente (debido a sobrecarga o mantenimiento). Es un error temporal.
+504 Gateway Timeout: El servidor, actuando como una puerta de enlace o proxy, no recibió una respuesta a tiempo del servidor upstream.
