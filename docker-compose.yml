@@ -11,22 +11,60 @@ services:
     ports:
       - "5432:5432"
 
-  backend:
-    build: ./backend
+  user-service:
+    build: ./user-service
     ports:
-      - "5000:5000"
+      - "3001:3001"
     depends_on:
       - postgres
     develop:
       watch:
         - action: sync
-          path: ./backend
+          path: ./user-service
           target: /app
           ignore:
             - node_modules/
         - action: rebuild
           path: package.json
     command: npm start
+
+  order-service:
+    build: ./order-service
+    volumes:
+      - ./order-service:/app/order-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - postgres
+    develop:
+      watch:
+        - action: sync
+          path: ./order-service
+          target: /app
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
+    command: npm start
+
+  invoice-service:
+    build: ./invoice-service
+    volumes:
+      - ./invoice-service:/app/invoice-service
+    ports:
+      - "3003:3003"
+    depends_on:
+      - postgres
+    develop:
+      watch:
+        - action: sync
+          path: ./invoice-service
+          target: /app
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
+      command: npm start
   
   frontend:
     build: ./frontend
