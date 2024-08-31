@@ -14,3 +14,28 @@ Provisión de Infraestructura: Involucra el suministro de infraestructura físic
 Provisión Educativa: Se refiere a la oferta de programas educativos, cursos, entrenamientos o capacitación.
 
 Provisión Logística: Incluye la gestión y entrega de bienes o servicios, abarcando transporte, almacenamiento y distribución.
+
+REACT Hooks:
+`useState`          
+Maneja el estado local en un componente funcional.                                               **Imagina que necesitas hacer esto**: Tienes un botón en tu aplicación que, cada vez que se presiona, debe incrementar un contador y mostrar el nuevo valor en la pantalla. Usarías `useState` para almacenar el valor del contador y actualizarlo cada vez que el usuario hace clic. 
+
+`useEffect`         
+Realiza efectos secundarios, como llamadas a APIs o manipulación del DOM, después de que un componente se haya renderizado. 
+**Imagina que necesitas hacer esto**: Tienes una lista de productos que quieres cargar desde un servidor cuando el componente se monta. Usarías `useEffect` para hacer la solicitud HTTP y actualizar la lista de productos cuando los datos se hayan recibido. 
+
+`useContext`     
+Accede a valores compartidos en un árbol de componentes sin necesidad de pasar props manualmente.  **Imagina que necesitas hacer esto**: Estás desarrollando una aplicación con un sistema de autenticación, y necesitas que el estado de si un usuario está autenticado o no esté disponible en muchos componentes diferentes. Con `useContext`, puedes compartir este estado fácilmente sin pasar props por todos los componentes intermedios. 
+
+ `useReducer`
+ Maneja estados más complejos con múltiples sub-estados o lógica avanzada, útil para formularios grandes o aplicaciones con múltiples acciones en el estado.
+ **Imagina que necesitas hacer esto**: Tienes un formulario extenso con muchas entradas y validaciones, y necesitas manejar diferentes estados como "campo válido", "error en el campo", o "formulario enviado". `useReducer` te permite manejar estos múltiples estados y sus transiciones de manera clara y organizada. 
+
+`useRef`
+Crea una referencia mutable que no causa renderizados adicionales cuando cambia.                 **Imagina que necesitas hacer esto**: Tienes un campo de texto donde quieres que el cursor esté automáticamente enfocado cuando el componente se carga, o necesitas acceder directamente al valor del campo sin causar una re-renderización. `useRef` te permite manejar estos casos fácilmente. 
+
+`useMemo`
+Memoriza cálculos costosos y solo los recalcula cuando cambian las dependencias.                 **Imagina que necesitas hacer esto**: Estás mostrando una lista de elementos filtrados basada en criterios complejos, y no quieres recalcular el filtro cada vez que el componente se renderiza, solo cuando los criterios cambian. `useMemo` te ayuda a optimizar esto, recalculando solo cuando es necesario. 
+
+`useCallback`
+Memoriza una función para evitar que se vuelva a crear en cada renderizado, útil cuando se pasa como prop a componentes hijos que dependen de la identidad de la función. 
+**Imagina que necesitas hacer esto**: Tienes un componente hijo que recibe una función como prop para manejar un evento (por ejemplo, al hacer clic en un botón). Si esa función cambia en cada renderizado, el componente hijo también se volverá a renderizar. `useCallback` ayuda a prevenir esta renderización innecesaria, manteniendo la misma función a menos que cambien sus dependencias. 

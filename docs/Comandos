@@ -8,6 +8,7 @@ docer logs // lista log docker
 docker ps // lista imagenes 
 docker-compose exec backend sh // acceder al contenedor
 docker login // loguearse
+docker-compose restar portal-proveedores-frontend // Solo reinicia ese cotenedor
 
 # sequelize
 npx sequelize-cli model:generate --name Invoice --attributes name:string,amount:decimal,providerId:integer // Crea Modelos y archivo de migración
