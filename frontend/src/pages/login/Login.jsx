@@ -1,18 +1,18 @@
 import React,{ useContext, useState } from "react";
-import useFetch from "../../hooks/useFetch";
 import { AuthContext } from "../../context/AuthContext";
-import { Button, TextField, Container, Typography, Box, Alert, containerClasses } from "@mui/material";
+import { Box, Button, FormControl, FormLabel, Input, Heading,  Alert, AlertIcon } from "@chakra-ui/react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const Login = async () => {
+const Login = () => {
+  const navigate = useNavigate();
   const [credentials, setCredentials ] = useState({
-    username: undefined,
-    password: undefined
+    username: "",
+    password: ""
   });
 
-  const {user, loading, error, dispatch} = useContext(AuthContext);
+  const {loading, error, dispatch} = useContext(AuthContext);
 
-  /* js lógica */
   const handleChange = (e) => {
     setCredentials((prev) => ({...prev, [e.target.name]: e.target.value }));
   };
@@ -26,66 +26,37 @@ const Login = async () => {
         credentials
       )
       dispatch({type:"LOGIN_SUCCESS", payload: res.data});
-    } catch (error) {
-      dispatch({type: "LOGIN_FAILURE", payload: error.response.data});
+      navigate("/");
+    } catch (err) {
+      dispatch({type: "LOGIN_FAILURE", payload: err.response.data});
     }
   }
-
-  console.log(user);
   
   return (
-    <Container maxWidth="xs">
-      <Box
-        sx={{
-          marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Typography component="h1" variant="h5">
+    <Box maxW="sm" mx="auto" mt="10">
+      <Heading as="h1" size="lg" mb="6" textAlign="center">
+        Login
+      </Heading>
+      {error && (
+        <Alert status="error" mb="6">
+          <AlertIcon />
+          {error.message}
+        </Alert>
+      )}
+      <form onSubmit={handleSubmit}>
+        <FormControl id="username" mb="4">
+          <FormLabel>Username</FormLabel>
+          <Input type="text" name="username" value={credentials.username} onChange={handleChange} />
+        </FormControl>
+        <FormControl id="password" mb="6">
+          <FormLabel>Password</FormLabel>
+          <Input type="password" name="password" value={credentials.password} onChange={handleChange} />
+        </FormControl>
+        <Button type="submit" colorScheme="teal" width="full" isLoading={loading}>
           Login
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="username"
-            label="Usuario"
-            name="username"
-            autoComplete="username"
-            autoFocus
-            onChange={handleChange}
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Clave"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-            onChange={handleChange}
-          />
-          {error && <Alert severity="error">{error.message}</Alert>}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            disabled={loading}
-            sx={{ mt: 3, mb: 2 }}
-          >
-            {loading ? "Logging in..." : "Login"}
-          </Button>
-        </Box>
-      </Box>
-    </Container>
-
+        </Button>
+      </form>
+    </Box>
   );
 };
 
