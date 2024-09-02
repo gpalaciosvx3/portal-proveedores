@@ -33,7 +33,9 @@ export const login = async (req, res, next) => {
             .json({
                 message: 'Autentificación correcta!',
                 token: token,
-                user: user
+                username: user.username,
+                password: user.password,
+                isAdmin: user.isAdmin
             });
     } catch (error) {
         next(error);

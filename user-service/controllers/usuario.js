@@ -5,7 +5,6 @@ import { createError } from "../utils/error.js";
 // Get Usuarios
 export const getUsuarios = async (req,res,next) => {
   try {
-    console.log('S1111');
     const Users = await Usuario.findAll({
       order: [
         ['createdAt', 'ASC'],
@@ -53,7 +52,6 @@ export const updateUsuario = async (req,res,next) => {
   try {
     const {username, password, ...others} = req.body;
     const {id_user} = req.params;
-    console.log('id_user: ', id_user);
     const existeUser = await Usuario.findByPk(id_user);
     
     /* VALIDACIONES */
